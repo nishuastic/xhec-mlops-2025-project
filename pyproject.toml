@@ -23,6 +23,8 @@ dependencies = [
     "pydantic>=2.12.3",
     "scikit-learn>=1.7.2",
     "pydantic>=2.12.3",
+    "loguru>=0.7.3",
+    "black>=25.9.0",
 ]
 
 [dependency-groups]
@@ -32,3 +34,17 @@ dev = [
     "pytest>=7.0.0",
     "pytest-cov>=4.0.0",
 ]
+
+[tool.black]
+line-length = 88
+target-version = ["py310"]
+
+[tool.ruff]
+extend-select = ["I"]
+fix = true
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint.isort]
+known-first-party = ["src"]
+combine-as-imports = true
