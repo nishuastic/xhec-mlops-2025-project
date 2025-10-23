@@ -1,6 +1,7 @@
-from src.modelling.utils import save_pickle, load_pickle
-import tempfile
 import os
+import tempfile
+
+from src.modelling.utils import load_pickle, save_pickle
 
 
 def test_save_and_load_pickle():

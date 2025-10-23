@@ -6,6 +6,11 @@
 [![Linting: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-informational?logo=pre-commit&logoColor=white)](https://github.com/artefactory/xhec-mlops-project-student/blob/main/.pre-commit-config.yaml)
 </div>
+## Contributing
+
+Run the pre-commit hook before making a commit to avoid issues.
+
+`uv run pre-commit run --all-files`
 
 ## 🎯 Project Overview
 
