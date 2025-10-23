@@ -2,11 +2,6 @@
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools]
-packages = ["xhec-mlops-project-student"]
-[tool.setuptools.package-data]
-xhec_mlops_project_student = ["py.typed"]
-
 [project]
 name = "xhec-mlops-project-student"
 version = "0.0.1"
