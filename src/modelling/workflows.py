@@ -1,10 +1,16 @@
 import os
-from typing import Optional, Dict
+from typing import Dict, Optional
 
 from loguru import logger
-from modelling.preprocessing import load_data, add_target, filter_outliers, prepare_features
-from modelling.training import train_model, evaluate_model, save_artifacts
+
 from modelling.config import DATA_DIR, MODEL_TYPE
+from modelling.preprocessing import (
+    add_target,
+    filter_outliers,
+    load_data,
+    prepare_features,
+)
+from modelling.training import evaluate_model, save_artifacts, train_model
 
 
 def train_workflow(
@@ -45,7 +51,8 @@ def train_workflow(
     save_artifacts(pipe)
 
     logger.success(
-        f"Workflow complete! Model={model_type}, RMSE={metrics['RMSE']:.3f}, R2={metrics['R2']:.3f}"
+        f"Workflow complete! Model={model_type}, "
+        f"RMSE={metrics['RMSE']:.3f}, R2={metrics['R2']:.3f}"
     )
 
     return {"model": pipe, "metrics": metrics}

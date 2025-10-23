@@ -1,5 +1,6 @@
-from src.modelling import config
 from pathlib import Path
+
+from src.modelling import config
 
 
 def test_config_paths_exist():
