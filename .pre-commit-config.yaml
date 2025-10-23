@@ -13,6 +13,10 @@ repos:
     rev: v0.8.2
     hooks:
       - id: ruff
+<<<<<<< 1/eda_and_modelling_notebooks
+=======
+        args: [--fix]
+>>>>>>> main
       - id: ruff-format
   - repo: https://github.com/astral-sh/uv-pre-commit
     rev: 0.7.17
