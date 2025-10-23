@@ -1,16 +1,19 @@
 from typing import Dict
+
 import numpy as np
-from sklearn.linear_model import LinearRegression, Ridge
-from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
-from sklearn.pipeline import Pipeline
-from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from loguru import logger
+from sklearn.ensemble import GradientBoostingRegressor, RandomForestRegressor
+from sklearn.linear_model import LinearRegression, Ridge
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+from sklearn.pipeline import Pipeline
 
-from modelling.utils import save_pickle
 from modelling.config import PIPELINE_PATH, RANDOM_STATE
+from modelling.utils import save_pickle
 
 
-def train_model(X_train, y_train, preprocessor, model_type: str = "GradientBoosting") -> Pipeline:
+def train_model(
+    X_train, y_train, preprocessor, model_type: str = "GradientBoosting"
+) -> Pipeline:
     """
     Train a regression model wrapped in a preprocessing pipeline.
 

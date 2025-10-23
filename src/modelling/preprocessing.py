@@ -1,11 +1,18 @@
+from typing import Tuple
+
 import pandas as pd
-import numpy as np
+from loguru import logger
+from sklearn.compose import ColumnTransformer
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
-from sklearn.compose import ColumnTransformer
-from loguru import logger
-from typing import Tuple
-from modelling.config import TARGET, NUMERIC_COLS, CATEGORICAL_COLS, TEST_SIZE, RANDOM_STATE
+
+from modelling.config import (
+    CATEGORICAL_COLS,
+    NUMERIC_COLS,
+    RANDOM_STATE,
+    TARGET,
+    TEST_SIZE,
+)
 
 
 def load_data(filepath: str) -> pd.DataFrame:
@@ -38,7 +45,9 @@ def filter_outliers(df: pd.DataFrame) -> pd.DataFrame:
     return df_filtered
 
 
-def prepare_features(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame, pd.Series, pd.Series, ColumnTransformer]:
+def prepare_features(
+    df: pd.DataFrame,
+) -> Tuple[pd.DataFrame, pd.DataFrame, pd.Series, pd.Series, ColumnTransformer]:
     """Split data and create ColumnTransformer"""
     X = df.drop(columns=[TARGET])
     y = df[TARGET]
