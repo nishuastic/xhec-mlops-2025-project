@@ -3,7 +3,7 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-packages = ["xhec_mlops_project_student"]
+packages = ["xhec-mlops-project-student"]
 [tool.setuptools.package-data]
 xhec_mlops_project_student = ["py.typed"]
 
