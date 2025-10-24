@@ -1,6 +1,4 @@
 #!/bin/bash
-
-# TODO: Use this file in your Dockerfile to run the services
 echo "🚀 Starting Prefect server..."
 uv run prefect server start --host 0.0.0.0 --port 4201 &
 

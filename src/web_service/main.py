@@ -22,7 +22,18 @@ def home() -> dict:
 
 @app.post("/predict", response_model=PredObj, status_code=201)
 def predict(payload: AbaloneInput) -> PredObj:
-    # TODO: complete and replace the "InsertHereAPydanticClass" with the correct Pydantic classes defined in web_service/lib/models.py
+    """
+    Predicts the age of an abalone given its input features.
+
+    This endpoint accepts input data for a single abalone, processes it through a
+    pre-trained machine learning pipeline, and returns the predicted age.
+
+    Args:
+        payload (AbaloneInput): Input data for the abalone, including all required features.
+
+    Returns:
+        PredObj: A dictionary-like object containing the predicted age with key "Age".
+    """
     df = pd.DataFrame([payload.dict(by_alias=True)])
     pipe = load_pickle(PIPELINE_PATH)
     preds = pipe.predict(df)[0]
