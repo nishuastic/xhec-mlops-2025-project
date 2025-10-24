@@ -6,11 +6,6 @@
 [![Linting: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-informational?logo=pre-commit&logoColor=white)](https://github.com/artefactory/xhec-mlops-project-student/blob/main/.pre-commit-config.yaml)
 </div>
-## Contributing
-
-Run the pre-commit hook before making a commit to avoid issues.
-
-`uv run pre-commit run --all-files`
 
 ## Running the App
 All the following commands should be run from the project root.
@@ -33,10 +28,10 @@ Using Docker:
 Navigate to the given localhost url /docs for uvicorn (8001)
 
 To activate Prefect locally:
-1. uv run prefect work-pool create "abalone-training-pool" --type process
-2. uv run prefect worker start --pool "abalone-training-pool"
-3. Open a new terminal, then run: uv run prefect deploy --name abalone-retrain-weekly
-4. Open the Prefect UI (in another terminal) to verify the deployment: uv run prefect server start
+1. Open the Prefect UI to verify the deployment: uv run prefect server start
+2. Open a new terminal, then run: uv run prefect work-pool create "abalone-training-pool" --type process
+3. uv run prefect worker start --pool "abalone-training-pool"
+4. Open a new terminal, then run: uv run prefect deploy --name abalone-retrain-weekly
 
 To activate Prefect in docker:
 
@@ -45,7 +40,11 @@ This is done automatically, simply navigate to the Prefect URL displayed when us
 ## Contributors
 
 Martyna Harasym
+
 João Silva
+
 Maxim Ochterbeck
+
 Nischay Parekh
+
 Samyukt Sriram
