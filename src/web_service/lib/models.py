@@ -25,7 +25,6 @@ class AbaloneInput(BaseModel):
     Shell_weight: float = Field(
         ..., alias="Shell weight", description="Weight of dried shell (grams)."
     )
-    Age: float = Field(..., description="Age of abalone in years.")
 
 
 class PredObj(BaseModel):
