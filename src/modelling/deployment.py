@@ -1,6 +1,6 @@
 from prefect import serve
 
-from modelling.prefect_flows import train_flow
+from src.modelling.prefect_flows import train_flow
 
 train_weekly = train_flow.to_deployment(
     name="abalone-retrain-weekly",

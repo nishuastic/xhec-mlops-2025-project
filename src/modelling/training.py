@@ -7,8 +7,8 @@ from sklearn.linear_model import LinearRegression, Ridge
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.pipeline import Pipeline
 
-from modelling.config import PIPELINE_PATH, RANDOM_STATE
-from modelling.utils import save_pickle
+from src.modelling.config import PIPELINE_PATH, RANDOM_STATE
+from src.modelling.utils import save_pickle
 
 
 def train_model(

@@ -3,14 +3,14 @@ from typing import Dict, Optional
 
 from loguru import logger
 
-from modelling.config import DATA_DIR, MODEL_TYPE
-from modelling.preprocessing import (
+from src.modelling.config import DATA_DIR, MODEL_TYPE
+from src.modelling.preprocessing import (
     add_target,
     filter_outliers,
     load_data,
     prepare_features,
 )
-from modelling.training import evaluate_model, save_artifacts, train_model
+from src.modelling.training import evaluate_model, save_artifacts, train_model
 
 
 def train_workflow(
