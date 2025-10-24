@@ -7,11 +7,11 @@ WORKDIR /app
 RUN pip install uv
 
 #all the github code -> docker container
-COPY . . 
+COPY . .
 
 RUN uv sync
 
 #need to give it this permission to execute
-RUN chmod +x bin/run_services.sh 
+RUN chmod +x bin/run_services.sh
 
 CMD ["./bin/run_services.sh"]
