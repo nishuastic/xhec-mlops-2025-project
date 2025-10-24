@@ -25,6 +25,8 @@ dependencies = [
     "pydantic>=2.12.3",
     "loguru>=0.7.3",
     "black>=25.9.0",
+    "prefect>=3.0.0",
+    "joblib>=1.4.2",
 ]
 
 [dependency-groups]

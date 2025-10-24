@@ -1,0 +1,39 @@
+# Welcome to your prefect.yaml file! You can use this file for storing and managing
+# configuration for deploying your flows. We recommend committing this file to source
+# control along with your flow code.
+
+# Generic metadata about this project
+name: xhec-mlops-2025-project
+prefect-version: 3.4.25
+
+# build section allows you to manage and build docker images
+build: null
+
+# push section allows you to manage if and how this project is uploaded to remote locations
+push: null
+
+# pull section allows you to provide instructions for cloning this project in remote locations
+pull:
+- prefect.deployments.steps.set_working_directory:
+    directory: /Users/martynaharasym/Desktop/DSB/xhec-mlops-2025-project
+
+# the deployments section allows you to provide configuration for deploying flows
+deployments:
+- name: abalone-retrain-weekly
+  version: null
+  tags: []
+  concurrency_limit: null
+  description: Run the full training flow.
+  entrypoint: src/modelling/prefect_flows.py:train_flow
+  parameters:
+    input_filepath: assets/data/abalone.csv
+    artifacts_dirpath: models
+    model_type: RandomForest
+  work_pool:
+    name: abalone-training-pool
+    work_queue_name: null
+    job_variables: {}
+  schedules:
+  - interval: 604800.0
+    anchor_date: '2025-10-24T09:25:08.775014+00:00'
+    timezone: UTC
