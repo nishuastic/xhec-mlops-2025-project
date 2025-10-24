@@ -1,8 +1,8 @@
 import pandas as pd
 from loguru import logger
 
-from modelling.config import PIPELINE_PATH
-from modelling.utils import load_pickle
+from src.modelling.config import PIPELINE_PATH
+from src.modelling.utils import load_pickle
 
 
 def predict(new_data: pd.DataFrame) -> pd.Series:

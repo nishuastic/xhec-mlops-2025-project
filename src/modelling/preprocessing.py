@@ -6,7 +6,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
 
-from modelling.config import (
+from src.modelling.config import (
     CATEGORICAL_COLS,
     NUMERIC_COLS,
     RANDOM_STATE,
