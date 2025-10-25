@@ -11,7 +11,7 @@ COPY . .
 
 ENV PREFECT_API_URL="http://127.0.0.1:4201/api"
 
-RUN uv sync
+RUN uv sync --no-dev
 
 #need to give it this permission to execute
 RUN chmod +x bin/run_services.sh
