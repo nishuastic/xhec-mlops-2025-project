@@ -1,9 +1,16 @@
 """Test configuration and fixtures."""
 
+import sys
+from pathlib import Path
+
 import pandas as pd
 import pytest
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
+
+# Add project root to Python path
+project_root = Path(__file__).parent.parent
+sys.path.insert(0, str(project_root))
 
 # Define constants locally to avoid import issues
 CATEGORICAL_COLS = ["Sex"]

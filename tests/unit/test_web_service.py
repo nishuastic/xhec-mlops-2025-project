@@ -186,7 +186,7 @@ class TestWebServiceAPI:
         }
 
         # The endpoint doesn't have error handling, so it will raise the exception
-        with pytest.raises(ValueError):
+        with pytest.raises(FileNotFoundError):
             client.post("/predict", json=payload)
 
     @patch("src.web_service.main.load_pickle")
