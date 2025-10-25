@@ -1,4 +1,5 @@
 import pickle
+from pathlib import Path
 from typing import Any
 
 from loguru import logger
@@ -6,6 +7,9 @@ from loguru import logger
 
 def save_pickle(obj: Any, filepath: str) -> None:
     """Save an object to disk using pickle."""
+    # Create directory if it doesn't exist
+    Path(filepath).parent.mkdir(parents=True, exist_ok=True)
+
     with open(filepath, "wb") as f:
         pickle.dump(obj, f)
     logger.info(f"Saved: {filepath}")
