@@ -1,5 +1,5 @@
 version = 1
-revision = 3
+revision = 2
 requires-python = ">=3.11"
 resolution-markers = [
     "python_full_version >= '3.14'",
@@ -4275,12 +4275,10 @@ name = "xhec-mlops-project-student"
 version = "0.0.1"
 source = { editable = "." }
 dependencies = [
-    { name = "black" },
     { name = "joblib" },
     { name = "loguru" },
     { name = "matplotlib" },
     { name = "mlflow" },
-    { name = "notebook" },
     { name = "numpy" },
     { name = "pandas" },
     { name = "prefect" },
@@ -4290,6 +4288,8 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
+    { name = "black" },
+    { name = "notebook" },
     { name = "pre-commit" },
     { name = "pytest" },
     { name = "pytest-cov" },
@@ -4298,12 +4298,10 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "black", specifier = ">=25.9.0" },
     { name = "joblib", specifier = ">=1.4.2" },
     { name = "loguru", specifier = ">=0.7.3" },
     { name = "matplotlib", specifier = ">=3.10.7" },
     { name = "mlflow", specifier = ">=3.5.1" },
-    { name = "notebook", specifier = ">=7.4.7" },
     { name = "numpy", specifier = ">=2.3.4" },
     { name = "pandas", specifier = ">=2.3.3" },
     { name = "prefect", specifier = ">=3.0.0" },
@@ -4313,6 +4311,8 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [
+    { name = "black", specifier = ">=25.9.0" },
+    { name = "notebook", specifier = ">=7.4.7" },
     { name = "pre-commit", specifier = ">=4.3.0" },
     { name = "pytest", specifier = ">=7.0.0" },
     { name = "pytest-cov", specifier = ">=4.0.0" },
